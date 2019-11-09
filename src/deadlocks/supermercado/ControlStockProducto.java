@@ -58,4 +58,7 @@ public class ControlStockProducto {
 		return producto.equals(producto1);
 	}
 
+	public String getNombre() {
+		return this.producto;
+	}
 }

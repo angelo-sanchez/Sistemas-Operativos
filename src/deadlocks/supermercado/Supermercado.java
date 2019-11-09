@@ -75,9 +75,10 @@ public class Supermercado {
 		ControlStockProducto stockProducto = this.canasta.get(producto);
 		stockProducto.quitarDeCanasta();
 	}
-	public synchronized void quitarVencidos(){
+	public synchronized void quitarVencidos(int diasPermitido){
 		for(ControlStockProducto stockProducto : this.canasta.values()){
-			if(stockProducto.tiempoEnCanasta() >= 7){
+			if(stockProducto.tiempoEnCanasta() >= diasPermitido){
+				System.err.print("Se quita el producto "+stockProducto.getNombre()+" por tiempo\n");
 				stockProducto.quitarDeCanasta();
 				continue;
 			}

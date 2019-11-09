@@ -1,0 +1,30 @@
+CPU: 2 procesadores lógicos
+Config 1:
+    - Uso del CPU: Medio, como hay sólo 2 threads se asume que éstos están haciendo trabajo util.
+    - Nunca el consumidor consumió dos veces el mismo elemento.
+    - Efectivamente, el último elemento producido es consumido
+Config 2:
+    - Uso del CPU: Medio, similar a la ejecución anterior.
+    - Varias veces aparece consumido el mismo elemento.
+    - El ultimo elemento (entre varios) producido no aparece en la lista de consumidos.
+Config 3:
+    - Uso del CPU: Medio, similar a las ejecuciones anteriores.
+    - Nunca el consumidor consume el mismo elemento dos veces.
+    - Todos los elementos aparecen consumidos.
+Config 4:
+    - Uso del CPU: Alto, puede deberse a los cambios de contexto entre consumidores
+    - Hay casos en los que un consumidor consumió dos veces el mismo elemento.
+    - En cierto punto de la ejecución, el programa no continúa, no se detecta ningún deadlock, por lo que podría estar
+siendo un livelock.
+Config 5:
+    - Uso del CPU: Alto, similar a la ejecución anterior.
+    - Nunca el consumidor consume el mismo elemento.
+    - Similar al anterior, la ejecución queda bloqueada en algún punto.
+Config 6:
+    - Muy similar a las ultimas ejecuciones.
+Config 7:
+    - Similar a las ultimas ejecuciones, esta ejecucion fue mucho
+más larga que las anteriores, pero es por la cantidad de elementos
+que se produjeron
+Config 8:
+    -

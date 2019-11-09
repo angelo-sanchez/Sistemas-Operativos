@@ -1,0 +1,15 @@
+2. Considere una feria electrónica donde se exhibe una demo de un videojuego nuevo. A lo largo de
+día concurren a probar el videojuego jugadores (threads), los cuales deben sincronizarse como sigue.
+Cuando un jugador llega para jugar, se sienta en un área de espera. Cuando hay en dicha área 4 o
+más jugadores, se les permite a 4 de ellos jugar. Siempre que un jugador se aproxime a la consola,
+espera a los restantes 3 jugadores para empezar a jugar. Los 4 jugadores pueden abandonar el juego
+en cualquier momento, pero el juego en sí termina cuando los 4 abandonan. Luego de esto, se les
+permite a 4 nuevos jugadores en espera a comenzar un nuevo juego.
+
+a) Programe una solución evitando race conditions, busy waits, deadlocks, y maximizando con
+currencia. El código debe estar comentado, especialmente las estructuras concurrentes. Debe
+usar arreglos planos para las estructuras compartidas entre threads (no se permite Vector o listas
+sincronizadas).
+
+b) Explique por qué su solución está libre de deadlocks, relacionando con las condiciones vistas
+en teoria de acuerdo a los procesos/hilos y recursos a partir de resolver el punto a).
